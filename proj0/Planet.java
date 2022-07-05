@@ -7,14 +7,14 @@ public class Planet {
 	public double mass;
 	public String imgFileName;
 
-    public static final double G = 6.67e-11;	
+    private static final double G = 6.67e-11;	
 	public Planet(double xP, double yP, double xV, double yV, double m, String img){
-		xxPos = xP;
-		yyPos = yP;
-		xxVel = xV;
-		yyVel = yV;
-		mass = m;
-		imgFileName = img;
+		this.xxPos = xP;
+		this.yyPos = yP;
+		this.xxVel = xV;
+		this.yyVel = yV;
+		this.mass = m;
+		this.imgFileName = img;
 	}
 
 	public Planet(Planet b){
@@ -22,8 +22,8 @@ public class Planet {
 		this.yyPos = b.yyPos;
 		this.xxVel = b.xxVel;
 		this.yyVel = b.yyVel;
-		this.mass = mass;
-		this.imgFileName = imgFileName;
+		this.mass = b.mass;
+		this.imgFileName = b.imgFileName;
 		
 	}
 	public  double calcDistance(Planet b2){
